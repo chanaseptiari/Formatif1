@@ -53,16 +53,7 @@ RadioButton jkdipilih;
                 startActivity(login);
             }
             else {
-                AlertDialog.Builder notif1 = new AlertDialog.Builder(this);
-                notif1.setTitle("Salah Password")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .setMessage(password + " Tidak Sama Dengan " + konfPassword)
-                        .show();
+                KPass.setError("Konfirmasi Password Beda");
             }
         }
 

@@ -25,9 +25,9 @@ TextView FullName,EmailID,JenisKelamin;
         EmailID = findViewById(R.id.EmailID);
         JenisKelamin = findViewById(R.id.JenisKelamin);
 
-        String data1 = getIntent().getStringExtra("Full_Name");
-        String data2 = getIntent().getStringExtra("ID_Email");
-        String data3 = getIntent().getStringExtra("Jenis_Kelamin");
+        String data1 = getIntent().getStringExtra("Name");
+        String data2 = getIntent().getStringExtra("Email");
+        String data3 = getIntent().getStringExtra("JK");
 
         FullName.setText(data1);
         EmailID.setText(data2);
