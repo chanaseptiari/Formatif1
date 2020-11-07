@@ -1,5 +1,6 @@
 package com.example.formatif1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,10 +24,10 @@ RadioButton jkdipilih;
         btnDaftar.setOnClickListener(this);
 
         FName = findViewById(R.id.dft_F_name);
-        LName = findViewById(R.id.dft_F_name);
-        Email = findViewById(R.id.dft_F_name);
-        Pass = findViewById(R.id.dft_F_name);
-        KPass = findViewById(R.id.dft_F_name);
+        LName = findViewById(R.id.dft_L_name);
+        Email = findViewById(R.id.dft_Email);
+        Pass = findViewById(R.id.daftar_Pass);
+        KPass = findViewById(R.id.konfirmasi_Pass);
         jenisKelamin = findViewById(R.id.jenisKelamin);
 
     }
@@ -39,12 +40,12 @@ RadioButton jkdipilih;
             if (dipilih != -1){
                 jkdipilih = findViewById(dipilih);
                 String jk = jkdipilih.getText().toString();
-                login.putExtra("Jenis Kelamin",jk);
+                login.putExtra("Jenis_Kelamin",jk);
             }
             String FullName = FName.getText().toString() + " " + LName.getText().toString();
             String EmailID = Email.getText().toString();
-            login.putExtra("Full Name",FullName);
-            login.putExtra("ID Email",EmailID);
+            login.putExtra("Full_Name",FullName);
+            login.putExtra("ID_Email",EmailID);
             startActivity(login);
         }
 

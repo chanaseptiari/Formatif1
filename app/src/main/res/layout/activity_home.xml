@@ -14,14 +14,41 @@
         android:layout_height="150dp"
         android:src="@drawable/avatar"
         android:layout_centerInParent="true"
-        android:layout_above="@+id/biodata"
+        android:layout_above="@+id/FullName"
         android:contentDescription="@string/icon"
         />
+
     <TextView
-        android:id="@+id/biodata"
-        android:layout_width="match_parent"
+        android:id="@+id/FullName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/EmailID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/FullName"
+        />
+    <TextView
+        android:id="@+id/JenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/EmailID"
         />
 
     <Button
@@ -31,7 +58,7 @@
         android:text="@string/logout"
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/biodata"
+        android:layout_below="@id/JenisKelamin"
         android:textColor="@android:color/white"
         />
 
