@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/arch"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/login"
+        android:contentDescription="@string/icon"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <EditText
+            android:id="@+id/inputUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:autofillHints=""
+            />
+        <EditText
+            android:id="@+id/inputPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:autofillHints=""
+            />
+        <TextView
+            android:id="@+id/lp_Pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lupa_password"
+            android:textAlignment="viewEnd"
+            android:gravity="end"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50sp"
+        android:layout_below="@+id/login"
+        >
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/login"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10sp"
+            />
+        <Button
+            android:id="@+id/btnRegis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/regis"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

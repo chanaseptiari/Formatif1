@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Formatif1</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="icon">Icon</string>
+    <string name="lupa_password">Forgot Password?</string>
+    <string name="login">LOGIN</string>
+    <string name="regis">NO ACCOUNT YET? SIGNUP NOW</string>
+    <string name="signup">SIGNUP</string>
+    <string name="already">Already have an account? Login Now</string>
+    <string name="laki">Male</string>
+    <string name="cewe">Female</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="logout">Logout</string>
+</resources>
