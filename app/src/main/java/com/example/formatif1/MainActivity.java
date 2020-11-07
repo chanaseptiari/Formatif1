@@ -3,14 +3,10 @@ package com.example.formatif1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.DatabaseErrorHandler;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.nio.file.FileAlreadyExistsException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnDaftar, btnLogin;
@@ -39,9 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String user = inputUsername.getText().toString();
         String pass = inputPassword.getText().toString();
-        if (TextUtils.isEmpty(Data_Email)){
-            btnLogin.setEnabled(false);
-        }
         if(v.getId() == R.id.btnLogin){
             if (user.equals(Data_Email)){
                 if(pass.equals(Data_Passw)){
