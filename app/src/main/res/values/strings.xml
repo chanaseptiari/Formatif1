@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Formatif1</string>
-    <string name="username">Username</string>
+    <string name="username">ID Email</string>
     <string name="password">Password</string>
     <string name="icon">Icon</string>
     <string name="lupa_password">Forgot Password?</string>

@@ -3,6 +3,7 @@ package com.example.formatif1;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,24 +30,40 @@ RadioButton jkdipilih;
         Pass = findViewById(R.id.daftar_Pass);
         KPass = findViewById(R.id.konfirmasi_Pass);
         jenisKelamin = findViewById(R.id.jenisKelamin);
-
     }
 
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btnDaftar){
-            Intent login = new Intent(this, Home.class);
-            int dipilih = jenisKelamin.getCheckedRadioButtonId();
-            if (dipilih != -1){
-                jkdipilih = findViewById(dipilih);
-                String jk = jkdipilih.getText().toString();
-                login.putExtra("Jenis_Kelamin",jk);
+            String password = Pass.getText().toString();
+            String konfPassword = KPass.getText().toString();
+            if(password.equals(konfPassword)){
+                Intent login = new Intent(this, MainActivity.class);
+                int dipilih = jenisKelamin.getCheckedRadioButtonId();
+                if (dipilih != -1){
+                    jkdipilih = findViewById(dipilih);
+                    String jk = jkdipilih.getText().toString();
+                    login.putExtra("Jenis_Kelamin",jk);
+                }
+                String FullName = FName.getText().toString() + " " + LName.getText().toString();
+                String EmailID = Email.getText().toString();
+                login.putExtra("Password",password);
+                login.putExtra("Full_Name",FullName);
+                login.putExtra("ID_Email",EmailID);
+                startActivity(login);
             }
-            String FullName = FName.getText().toString() + " " + LName.getText().toString();
-            String EmailID = Email.getText().toString();
-            login.putExtra("Full_Name",FullName);
-            login.putExtra("ID_Email",EmailID);
-            startActivity(login);
+            else {
+                AlertDialog.Builder notif1 = new AlertDialog.Builder(this);
+                notif1.setTitle("Salah Password")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .setMessage(password + " Tidak Sama Dengan " + konfPassword)
+                        .show();
+            }
         }
 
     }
